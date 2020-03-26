@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
 {
     /// <summary>
-    /// IConfigurationBuilder extension methods for the MemoryConfigurationProvider with JSON string or JSON serialized object.
+    /// IConfigurationBuilder extension methods for the MemoryConfigurationProvider with JSON string or JSON serializable object.
     /// </summary>
     public static class NewtonsoftJsonMemoryConfigurationBuilderExtensions
     {
@@ -19,7 +19,7 @@ namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
         /// Adds the memory configuration provider to <paramref name="configurationBuilder"/>.
         /// </summary>
         /// <param name="configurationBuilder">The <see cref="IConfigurationBuilder"/> to add to.</param>
-        /// <param name="o">The object which will be serialized to JSON and added to memory configuration provider.</param>
+        /// <param name="o">The JSON serializable object ot add to memory configuration provider.</param>
         /// <param name="settings">The settings for JSON serialize.</param>
         /// <param name="keyPrefix">The prefix of configuration key.</param>
         /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
@@ -35,7 +35,7 @@ namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
         /// Adds the memory configuration provider to <paramref name="configurationBuilder"/>.
         /// </summary>
         /// <param name="configurationBuilder">The <see cref="IConfigurationBuilder"/> to add to.</param>
-        /// <param name="o">The object which will be serialized to JSON and added to memory configuration provider.</param>
+        /// <param name="o">The JSON serializable object ot add to memory configuration provider.</param>
         /// <param name="settings">The settings for JSON serialize.</param>
         /// <param name="keyPrefix">The prefix of configuration key.</param>
         /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>

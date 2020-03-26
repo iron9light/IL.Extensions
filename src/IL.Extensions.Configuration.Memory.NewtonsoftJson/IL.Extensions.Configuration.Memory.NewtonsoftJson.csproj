@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 
-    <Description>Create MemoryConfigurationProvider with JSON string or JSON serialized object for Microsoft.Extensions.Configuration using Json.NET.</Description>
+    <Description>Create MemoryConfigurationProvider with JSON string or JSON serializable object for Microsoft.Extensions.Configuration using Json.NET.</Description>
     <PackageTags>ASP.NET;AspNetCore;Configuration;JSON;Json.NET</PackageTags>
   </PropertyGroup>
 
