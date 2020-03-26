@@ -8,6 +8,6 @@
 
 ## IL.Extensions.Configuration.Memory.NewtonsoftJson
 
-[TODO: Add description]
+Create [MemoryConfigurationProvider](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?#memory-configuration-provider) with JSON string or JSON serialized object for [Microsoft.Extensions.Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) using [Json.NET](https://www.newtonsoft.com/json).
 
 [![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Memory.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Memory.NewtonsoftJson/)
