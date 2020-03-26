@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 using Xunit;
 
-namespace IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson.Tests
+namespace IL.Extensions.Configuration.Memory.NewtonsoftJson.Tests
 {
 #pragma warning disable S2699 // Tests should include assertions
     public class NewtonsoftJsonMemoryConfigurationBuilderExtensionsTests

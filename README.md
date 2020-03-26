@@ -6,8 +6,8 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=iron9light_IL.Extensions&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=iron9light_IL.Extensions)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=iron9light_IL.Extensions&metric=security_rating)](https://sonarcloud.io/dashboard?id=iron9light_IL.Extensions)
 
-## IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson
+## IL.Extensions.Configuration.Memory.NewtonsoftJson
 
 [TODO: Add description]
 
-[![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson/)
+[![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Memory.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Memory.NewtonsoftJson/)

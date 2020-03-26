@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson
+namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
 {
     /// <summary>
     /// IConfigurationBuilder extension methods for the MemoryConfigurationProvider with JSON string or JSON serialized object.

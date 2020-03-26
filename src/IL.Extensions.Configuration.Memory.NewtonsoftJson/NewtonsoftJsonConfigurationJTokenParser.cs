@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 
 using Newtonsoft.Json.Linq;
 
-namespace IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson
+namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
 {
     internal static class NewtonsoftJsonConfigurationJTokenParser
     {

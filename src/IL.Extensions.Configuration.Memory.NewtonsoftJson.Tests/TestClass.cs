@@ -1,6 +1,6 @@
 using System;
 
-namespace IL.Extensions.Configuration.Configuration.Memory.NewtonsoftJson.Tests
+namespace IL.Extensions.Configuration.Memory.NewtonsoftJson.Tests
 {
     public class TestClass
     {
