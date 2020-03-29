@@ -163,6 +163,38 @@ namespace IL.Extensions.Configuration.Binder.NewtonsoftJson.Tests
             actual!.Should().BeEquivalentTo(new TestClass());
         }
 
+        [Theory]
+        [AutoData]
+        public void Populate_can_bind_object(TestClass x1, TestClass x2)
+        {
+            x1.NullValue = null;
+            x1.NullList = null;
+            var config = GetConfiguration(x1);
+            config.Populate(x2);
+            x2.Should().BeEquivalentTo(x1);
+        }
+
+        [Theory]
+        [AutoData]
+        public void Populate_can_bind_object_with_prefix(TestClass x1, TestClass x2, string prefix)
+        {
+            x1.NullValue = null;
+            x1.NullList = null;
+            var config = GetConfiguration(x1, null, prefix);
+            config.Populate(prefix, x2);
+            x2.Should().BeEquivalentTo(x1);
+        }
+
+        [Theory]
+        [AutoData]
+        public void Populate_with_empty_config_can_bind_object(TestClass x)
+        {
+            var xClone = JsonConvert.DeserializeObject<TestClass>(JsonConvert.SerializeObject(x));
+            var config = new ConfigurationBuilder().Build();
+            config.Populate(x);
+            x.Should().BeEquivalentTo(xClone);
+        }
+
         private static IConfiguration GetConfiguration(object o, JsonSerializerSettings? settings = null, params string[] keyPrefix)
         {
             return new ConfigurationBuilder()
