@@ -154,6 +154,15 @@ namespace IL.Extensions.Configuration.Binder.NewtonsoftJson.Tests
             actual!.Should().BeEquivalentTo(x);
         }
 
+        [Fact]
+        public void ToObject_with_empty_config_can_get_object()
+        {
+            var config = new ConfigurationBuilder().Build();
+            var actual = config.ToObject<TestClass>();
+            actual.Should().NotBeNull();
+            actual!.Should().BeEquivalentTo(new TestClass());
+        }
+
         private static IConfiguration GetConfiguration(object o, JsonSerializerSettings? settings = null, params string[] keyPrefix)
         {
             return new ConfigurationBuilder()
