@@ -11,3 +11,10 @@
 Create [MemoryConfigurationProvider](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?#memory-configuration-provider) with JSON string or JSON serializable object for [Microsoft.Extensions.Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) using [Json.NET](https://www.newtonsoft.com/json).
 
 [![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Memory.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Memory.NewtonsoftJson/)
+
+## IL.Extensions.Configuration.Binder.NewtonsoftJson
+
+Functionality to bind an object to data in configuration providers for [Microsoft.Extensions.Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) using [Json.NET](https://www.newtonsoft.com/json).
+It's an alternative for [Microsoft.Extensions.Configuration.Binder](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Binder/).
+
+[![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Binder.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Binder.NewtonsoftJson/)

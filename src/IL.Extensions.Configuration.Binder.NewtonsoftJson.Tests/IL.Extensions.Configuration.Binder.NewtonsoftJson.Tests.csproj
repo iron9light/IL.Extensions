@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IL.Extensions.Configuration.Binder.NewtonsoftJson\IL.Extensions.Configuration.Binder.NewtonsoftJson.csproj" />
+    <ProjectReference Include="..\IL.Extensions.Configuration.Memory.NewtonsoftJson\IL.Extensions.Configuration.Memory.NewtonsoftJson.csproj" />
+  </ItemGroup>
+
+</Project>
