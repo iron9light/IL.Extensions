@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IL.Extensions.Configuration.Memory.NewtonsoftJson\IL.Extensions.Configuration.Memory.NewtonsoftJson.csproj" />
+    <ProjectReference Include="..\IL.Extensions.Options.ConfigurationExtensions.NewtonsoftJson\IL.Extensions.Options.ConfigurationExtensions.NewtonsoftJson.csproj" />
+  </ItemGroup>
+
+</Project>

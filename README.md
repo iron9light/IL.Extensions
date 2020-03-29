@@ -19,3 +19,11 @@ Functionality to bind an object to data in configuration providers for [Microsof
 It's an alternative for [Microsoft.Extensions.Configuration.Binder](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.Binder/).
 
 [![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Configuration.Binder.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Configuration.Binder.NewtonsoftJson/)
+
+## IL.Extensions.Options.ConfigurationExtensions.NewtonsoftJson
+
+Provides additional configuration specific functionality related to [Microsoft.Extensions.Options](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options) using [Json.NET](https://www.newtonsoft.com/json).
+
+It's an alternative for [Microsoft.Extensions.Options.ConfigurationExtensions](https://www.nuget.org/packages/Microsoft.Extensions.Options.ConfigurationExtensions/).
+
+[![NuGet](https://img.shields.io/nuget/vpre/IL.Extensions.Options.ConfigurationExtensions.NewtonsoftJson.svg)](https://www.nuget.org/packages/IL.Extensions.Options.ConfigurationExtensions.NewtonsoftJson/)
