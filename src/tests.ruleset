@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Tests analyzers rules" ToolsVersion="15.0">
   <Include Path="shipping.ruleset" Action="Default" />
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.Design">
+    <!-- ValidateArgumentsOfPublicMethods -->
+    <Rule Id="CA1062" Action="Info" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.Naming">
     <!-- IdentifiersShouldNotContainUnderscores -->
     <Rule Id="CA1707" Action="None" />
   </Rules>

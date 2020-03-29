@@ -35,12 +35,8 @@
     <!-- FileMustHaveHeader -->
     <Rule Id="SA1633" Action="None" />
   </Rules>
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.Design">
-    <!-- DoNotDirectlyAwaitATask -->
-    <Rule Id="CA1062" Action="None" />
-  </Rules>
-  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.ApiDesignGuidelines">
-    <!-- DoNotDirectlyAwaitATask -->
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.Reliability">
+    <!-- DoNotDirectlyAwaitATaskAnalyzer -->
     <Rule Id="CA2007" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.NetCore.Analyzers" RuleNamespace="Microsoft.NetCore.Analyzers.Runtime">

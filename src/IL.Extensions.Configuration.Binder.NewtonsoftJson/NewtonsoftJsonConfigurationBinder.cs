@@ -80,6 +80,11 @@ namespace IL.Extensions.Configuration.Binder.NewtonsoftJson
         /// <param name="settings">The <see cref="JsonSerializerSettings"/>.</param>
         public static void Populate(this IConfiguration configuration, string key, object instance, JsonSerializerSettings? settings = null)
         {
+            if (configuration == null)
+            {
+                throw new ArgumentNullException(nameof(configuration));
+            }
+
             if (key == null)
             {
                 throw new ArgumentNullException(nameof(key));
