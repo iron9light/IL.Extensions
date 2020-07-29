@@ -9,6 +9,10 @@
     <!-- IdentifiersShouldNotContainUnderscores -->
     <Rule Id="CA1707" Action="None" />
   </Rules>
+  <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers.QualityGuidelines">
+    <!-- MarkMembersAsStatic -->
+    <Rule Id="CA1822" Action="None" />
+  </Rules>
   <Rules AnalyzerId="Microsoft.VisualStudio.Threading.Analyzers" RuleNamespace="Microsoft.VisualStudio.Threading.Analyzers">
     <!-- Call async methods when in an async method -->
     <Rule Id="VSTHRD103" Action="Hidden" />
