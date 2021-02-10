@@ -14,7 +14,7 @@ namespace IL.Extensions.Configuration.Memory.NewtonsoftJson
     {
         public static IEnumerable<KeyValuePair<string, string?>> Parse(IEnumerable<string> keyPrefix, JToken token)
         {
-            return VisitToken(keyPrefix.ToImmutableArray(), token);
+            return VisitToken(keyPrefix.ToImmutableList(), token);
         }
 
         private static IEnumerable<KeyValuePair<string, string?>> VisitToken(IImmutableList<string> keys, JToken token)
