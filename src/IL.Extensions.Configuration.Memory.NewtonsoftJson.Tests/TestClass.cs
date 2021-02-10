@@ -10,9 +10,7 @@ namespace IL.Extensions.Configuration.Memory.NewtonsoftJson.Tests
 
         public string StringValue { get; set; } = string.Empty;
 
-#pragma warning disable CA1822
         public string? NullValue => null;
-#pragma warning restore CA1822
 
         public DateTime DateTimeValue { get; set; }
 
