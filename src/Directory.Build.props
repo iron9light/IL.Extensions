@@ -5,8 +5,9 @@
     <BaseOutputPath Condition=" '$(BaseOutputPath)' == '' ">$(RepoRootPath)bin\$(MSBuildProjectName)\</BaseOutputPath>
     <PackageOutputPath>$(RepoRootPath)bin\Packages\$(Configuration)\</PackageOutputPath>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
 
     <RepositoryUrl>https://github.com/iron9light/IL.Extensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/iron9light/IL.Extensions</PackageProjectUrl>
@@ -24,10 +25,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.2.31" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0" PrivateAssets="All" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.164" PrivateAssets="All" />
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.10.0.19839" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.6.13" PrivateAssets="All" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37" PrivateAssets="All" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321" PrivateAssets="All" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="8.18.0.27296" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.8.55" PrivateAssets="All" />
   </ItemGroup>
 </Project>
