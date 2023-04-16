@@ -26,10 +26,10 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET 5'
+  displayName: 'Use .NET 7'
   inputs:
     packageType: sdk
-    version: 5.x
+    version: 7.x
 
 - script: dotnet tool install --tool-path . nbgv
   displayName: 'Install NBGV tool'
