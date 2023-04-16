@@ -1,117 +1,113 @@
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 
 using Microsoft.Extensions.Configuration;
 
 using Newtonsoft.Json.Linq;
 
-namespace IL.Extensions.Configuration.Binder.NewtonsoftJson
+namespace IL.Extensions.Configuration.Binder.NewtonsoftJson;
+
+/// <summary>
+/// <see cref="IConfiguration"/> extension methods for converting to <see cref="JToken"/>.
+/// </summary>
+public static class NewtonsoftJsonConfigurationExtensions
 {
     /// <summary>
-    /// <see cref="IConfiguration"/> extension methods for converting to <see cref="JToken"/>.
+    /// Converte <see cref="IConfiguration"/> to <see cref="JToken"/>.
     /// </summary>
-    public static class NewtonsoftJsonConfigurationExtensions
+    /// <param name="configuration">The <see cref="IConfiguration"/>.</param>
+    /// <returns>The <see cref="JToken"/>.</returns>
+    public static JToken ToJToken(this IConfiguration configuration)
     {
-        /// <summary>
-        /// Converte <see cref="IConfiguration"/> to <see cref="JToken"/>.
-        /// </summary>
-        /// <param name="configuration">The <see cref="IConfiguration"/>.</param>
-        /// <returns>The <see cref="JToken"/>.</returns>
-        public static JToken ToJToken(this IConfiguration configuration)
+        if (configuration == null)
         {
-            if (configuration == null)
-            {
-                throw new ArgumentNullException(nameof(configuration));
-            }
-
-            if (configuration is IConfigurationSection configurationSection)
-            {
-                return configurationSection.ToJToken();
-            }
-
-            if (!configuration.GetChildren().Any())
-            {
-                return new JObject();
-            }
-
-            var sections = configuration.GetChildren().ToList();
-
-            if (sections.Count == 1 && string.IsNullOrEmpty(sections.First().Key))
-            {
-                var value = sections.First().Value;
-                if (value == null)
-                {
-                    return JValue.CreateNull();
-                }
-                else
-                {
-                    return JValue.CreateString(value);
-                }
-            }
-            else
-            {
-                return ToJObjectOrJArray(sections);
-            }
+            throw new ArgumentNullException(nameof(configuration));
         }
 
-        private static JToken ToJToken(this IConfigurationSection section)
+        if (configuration is IConfigurationSection configurationSection)
         {
-            if (section == null)
-            {
-                throw new ArgumentNullException(nameof(section));
-            }
+            return configurationSection.ToJToken();
+        }
 
-            if (section.Value != null)
-            {
-                return JValue.CreateString(section.Value);
-            }
-            else if (!section.GetChildren().Any())
+        if (!configuration.GetChildren().Any())
+        {
+            return new JObject();
+        }
+
+        var sections = configuration.GetChildren().ToList();
+
+        if (sections.Count == 1 && string.IsNullOrEmpty(sections.First().Key))
+        {
+            var value = sections.First().Value;
+            if (value == null)
             {
                 return JValue.CreateNull();
             }
             else
             {
-                return ToJObjectOrJArray(section.GetChildren().ToList());
+                return JValue.CreateString(value);
             }
         }
-
-        private static JToken ToJObjectOrJArray(IReadOnlyList<IConfigurationSection> sections)
+        else
         {
-            if (IsArray(sections))
-            {
-                var array = new JArray();
-                foreach (var section in sections)
-                {
-                    array.Add(section.ToJToken());
-                }
-
-                return array;
-            }
-            else
-            {
-                var jObject = new JObject();
-                foreach (var section in sections)
-                {
-                    jObject.Add(section.Key, section.ToJToken());
-                }
-
-                return jObject;
-            }
+            return ToJObjectOrJArray(sections);
         }
+    }
 
-        private static bool IsArray(IReadOnlyList<IConfigurationSection> sections)
+    private static JToken ToJToken(this IConfigurationSection section)
+    {
+        if (section == null)
         {
-            for (var i = 0; i < sections.Count; ++i)
+            throw new ArgumentNullException(nameof(section));
+        }
+
+        if (section.Value != null)
+        {
+            return JValue.CreateString(section.Value);
+        }
+        else if (!section.GetChildren().Any())
+        {
+            return JValue.CreateNull();
+        }
+        else
+        {
+            return ToJObjectOrJArray(section.GetChildren().ToList());
+        }
+    }
+
+    private static JToken ToJObjectOrJArray(IReadOnlyList<IConfigurationSection> sections)
+    {
+        if (IsArray(sections))
+        {
+            var array = new JArray();
+            foreach (var section in sections)
             {
-                if (sections[i].Key != i.ToString(CultureInfo.InvariantCulture))
-                {
-                    return false;
-                }
+                array.Add(section.ToJToken());
             }
 
-            return true;
+            return array;
         }
+        else
+        {
+            var jObject = new JObject();
+            foreach (var section in sections)
+            {
+                jObject.Add(section.Key, section.ToJToken());
+            }
+
+            return jObject;
+        }
+    }
+
+    private static bool IsArray(IReadOnlyList<IConfigurationSection> sections)
+    {
+        for (var i = 0; i < sections.Count; ++i)
+        {
+            if (sections[i].Key != i.ToString(CultureInfo.InvariantCulture))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
